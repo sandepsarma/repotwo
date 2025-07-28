@@ -9,7 +9,7 @@ pipeline{
         
         stage("second "){
             steps{
-                git url:"https://github.com/shivendraducat/my-web.git" , branch:"main"
+                git url:"https://github.com/sandepsarma/repotwo.git" , branch:"main"
             }
         }
         
