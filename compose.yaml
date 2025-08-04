@@ -1,0 +1,5 @@
+services:
+  web1:
+    image: azureclasses7docker/newrepo:latest
+    ports:
+      - "80:80"
