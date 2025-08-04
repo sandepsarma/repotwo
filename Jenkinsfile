@@ -1,27 +1,27 @@
 pipeline{
     agent any
     stages{
-        stage(" first step"){
+        stage("my first"){
             steps{
                 echo "hello my project"
             }
         }
         
-        stage("second "){
+        stage("git cloning"){
             steps{
                 git url:"https://github.com/sandepsarma/repotwo.git" , branch:"main"
             }
         }
         
-        stage("thirrd"){
+        stage("docker image"){
             steps{
-                bat 'docker build -t myimg .'
+                bat 'docker-compose down & docker-compose up'
             }
         }
         
         stage("deploy"){
             steps{
-                bat 'docker run -p 80:80 -d myimg'
+                bat 'docker ps'
             }
         }
     }
