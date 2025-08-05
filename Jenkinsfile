@@ -8,14 +8,6 @@ pipeline {
             }
         }
 
-        /*
-        stage("Git Cloning") {
-            steps {
-                git url: 'https://github.com/sandepsarma/repotwo.git', branch: 'main'
-            }
-        }
-        */
-
         stage("Docker Image") {
             steps {
                 bat '''
